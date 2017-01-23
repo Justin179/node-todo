@@ -1,0 +1,29 @@
+<html >
+	<head>
+		<title>The MEAN stack</title>
+    	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js "></script>
+	</head>
+	<body >
+		
+        <form action="/insert" method="POST">
+            Title:<br>
+            <input type="text" name="title" id="title"><br>
+            Content:<br>
+            <input type="text" name="content" id="content">
+            <input type="submit" value="submit">
+        </form>
+
+        <a href="/get-data">LOAD DATA</a>
+        { JSON.stringify(items) }
+        
+
+
+
+		<script>
+			<!--global-->
+			var clientPeople = <%- JSON.stringify(serverPeople) %>;
+		</script>
+
+
+	</body>
+</html>
