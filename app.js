@@ -11,7 +11,8 @@ mongoose.connect(config.getDbConnectionString());
 var setupController = require('./controller/setupController');
 setupController(app);
 
-
+var apiController = require('./controller/apiController');
+apiController(app);
 
 // 靜態資源 - deliver straight to the browser
 app.use('/assets',express.static(__dirname+'/public'));
